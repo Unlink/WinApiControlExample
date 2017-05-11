@@ -1,0 +1,23 @@
+﻿<Window x:Class="WinApiClicker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WinApiClicker"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="234.659" Width="575.238">
+    <Grid Margin="0,0,4,-0.4">
+        <ListBox x:Name="WindowListBox" Margin="0,0,73,0.2">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="{Binding Path=Icon}" Margin="3"></Image>
+                        <TextBlock Text="{Binding Path=MainWindowTitle}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button Content="Spusti" Margin="0,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="65" Click="RunOnWindow"/>
+    </Grid>
+</Window>
+
